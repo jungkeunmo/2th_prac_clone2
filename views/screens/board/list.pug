@@ -1,0 +1,15 @@
+extends ../../layout/base.pug
+
+block content 
+    section.wholeWrapper 
+        section.XX__left 
+        section.rsWrapper 
+            if loggedIn 
+                a(href="/board/write") 글작성
+            each b in boardList 
+                a(href=`/board/detail?bid=${b.id}`)
+                    div #{b.id}
+                    div #{b.title}
+                    div #{b.name}
+                    div #{b.createdAt}      
+        section.XX_right     

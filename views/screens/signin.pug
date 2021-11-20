@@ -1,0 +1,13 @@
+extends ../layout/base.pug
+
+block content 
+    section.wholeWrapper
+        section.XX__left 
+        section.rsWrapper
+            div.signinBox
+                div.signinBox_box 
+                    form.signinForm(action="/signin", method="POST")
+                        input(type="email", name="signinEmail")
+                        input(type="password", name="signinPassword")
+                        input(type="submit", name="SIGN IN")
+        section.XX__right

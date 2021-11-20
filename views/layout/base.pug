@@ -1,0 +1,28 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title PRAC_CLONE
+        link(rel="stylesheet", href="/css/styles.css")
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+    body 
+        header.header 
+            ul.menus
+                li.menus__item
+                    a(href="/") home 
+                li.menus__item
+                    a(href="/board/list") board 
+                if loggedIn 
+                    li.menus__item 
+                        a(href="/logout") logout
+                else 
+                    li.menus__item 
+                        a(href="/signin") signin 
+                    li.menus__item 
+                        a(href="/signup") signup              
+             
+        block content 
+
+        footer.footer footer         

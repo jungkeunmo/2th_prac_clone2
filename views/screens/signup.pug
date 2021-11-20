@@ -1,0 +1,21 @@
+extends ../layout/base.pug
+
+block content 
+    section.wholeWrapper 
+        section.XX_left
+        section.rsWrapper   
+            div 이용약관 동의
+    .wrapper 
+        input#chk1-js(type="checkbox")
+        span 동의 하시겠습니까?
+    .wrapper 
+        input#chk2-js(type="checkbox")    
+        span 동의 하시겠습니까?
+    form(action="/signup", method="POST")
+        input(type="text" name="input_mobile" required)
+        input(type="password" name="input_password" required)
+        input(type="email" name="input_email" required)
+        input(type="text" name="input_name" required)
+        input#signupBtn-js(type="submit" value="SINUP")
+        section.XX_right 
+    script(src="/js/signup.js")

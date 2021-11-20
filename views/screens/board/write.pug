@@ -1,0 +1,15 @@
+extends ../../layout/base.pug
+
+block content 
+    section.XX__left 
+    section.rsWrapper   
+        section.writeFormSection 
+            form(action="/board/write" method="POST")
+                div.wfBox
+                    lebel 제목  
+                    input(type="text" name="input_title")
+                div.wfBox
+                    lebel 내용
+                    textarea(name="input_content")
+                input(type="submit" value="WIRTE")     
+    section.XX__right  
